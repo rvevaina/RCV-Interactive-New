@@ -1,14 +1,40 @@
 $( document ).ready(function() {
 
-//About Section 1
+//Full screen Height fix
+
+    var fullHeight = function(){
+        var winHeight = $(window).height();
+        $(".full-height").css("height",winHeight);
+        console.log(winHeight);
+    };
+
+    $(window).on("resize", fullHeight);
 
 
-//Fade out div on scroll
+//Fade out div on scroll + Nav changes color
 
-    $(window).scroll(function(i){
+    var stickyTop = $('.about-section').offset().top-100;
+
+    $(window).scroll(function(){
         var scrollTop = $(window).scrollTop();
-        $('.about-section').css({'opacity':( 600-scrollTop )/600});
+        $('.main-landing').css({'opacity':( 1000-scrollTop )/1000});
+
+
+        if ($(window).scrollTop() >= stickyTop) {
+            $('.navbar').css({'background':'#f6f6f6'})
+        } else{
+            $('.navbar').css({'background':'rgba(215, 219, 218, 0.7)'})
+        }
     });
+
+    //Landing page scroll down
+    $('img.about-block').click(function(){
+        $('html, body').animate({
+            scrollTop: $("#about-section").offset().top-95
+        }, 1800);
+    });
+
+
 
 //Chrome Transitions
 
