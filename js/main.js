@@ -21,9 +21,11 @@ $( document ).ready(function() {
 
 
         if ($(window).scrollTop() >= stickyTop) {
-            $('.navbar').css({'background':'#f6f6f6'})
+            $('.navbar').css({'background':'#f6f6f6'});
+            $('.brand').css({'opacity':'1'});
         } else{
-            $('.navbar').css({'background':'rgba(215, 219, 218, 0.7)'})
+            $('.navbar').css({'background':'rgba(215, 219, 218, 0.7)'});
+            $('.brand').css({'opacity':'0'});
         }
     });
 
