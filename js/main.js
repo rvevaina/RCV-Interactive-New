@@ -22,10 +22,10 @@ $( document ).ready(function() {
 
         if ($(window).scrollTop() >= stickyTop) {
             $('.navbar').css({'background':'#f6f6f6'});
-            $('.brand').css({'opacity':'1'});
+            $('.about-page').css({'opacity':'1'});
         } else{
             $('.navbar').css({'background':'rgba(215, 219, 218, 0.7)'});
-            $('.brand').css({'opacity':'0'});
+            $('.about-page').css({'opacity':'0'});
         }
     });
 
@@ -35,6 +35,16 @@ $( document ).ready(function() {
             scrollTop: $("#about-section").offset().top-95
         }, 1800);
     });
+
+    //image after video is done
+
+    var video = document.getElementsByTagName('video')[0];
+
+    video.onended = function(e) {
+        $('.wall-image-after').animate({'opacity':'1'},1600);
+        $('.video-main').css({'opacity':'0'});
+        $('.wall-image').animate({'opacity':'0'}, 1600);
+    };
 
 
 
@@ -165,7 +175,7 @@ $( document ).ready(function() {
             $developHeader.stop().fadeToggle("slow");
             if (toggle === 0) {
                 $designContent.stop().animate({
-                    top: "14%",
+                    top: "10%",
                     left: "23%"
                 }, 1000);
                 $designHeader.animate({
@@ -212,7 +222,7 @@ $( document ).ready(function() {
             $designHeader.fadeToggle("slow");
             if (toggle === 0) {
                 $developContent.stop().animate({
-                    top: "8%",
+                    top: "4%",
                     left: "21%"
                 }, 1000);
                 $developHeader.animate({
@@ -233,7 +243,7 @@ $( document ).ready(function() {
             else if (toggle === 1) {
                 console.log(toggle);
                 $developContent.stop().animate({
-                    top: "42%",
+                    top: "37%",
                     left: "4%"
                 }, 800);
                 $developHeader.animate({
