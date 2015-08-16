@@ -48,12 +48,20 @@
     </div>
 
     <section class="main-landing full-height">
-        <img class ="wall-image" src="common-files/img/home/video-top7.png" alt=""/>
-        <img class="wall-image-after" src="common-files/img/home/wall-image-after3.png" alt=""/>
+        <img class ="wall-image" src="common-files/img/home/video-top7.png" usemap="#after" alt=""/>
+        <img class="wall-image-after" src="common-files/img/home/wall-image-after3.png" usemap="#after" alt=""/>
+        <map name="after" id="after">
+            <area shape="poly" coords="741,43,1146,35,1143,201,736,206" href="#about-section" onclick="slideToAbout();return false;">
+            <area shape="poly" coords="741,203,1146,202,1143,337,734,340" href="work.html">
+            <area shape="poly" coords="736,339,1149,345,1147,562,745,553" href="contact.html">
+            <area shape="poly" coords="96,173,741,179,742,421,105,425" href="#" onclick="stopVideo();return false;">
+        </map>
+        <div class="overlay"></div>
         <video autoplay class="video-main">
             <source src="common-files/img/home/video.mp4" type="video/mp4">
             <!--<source src="../video/band.webm" type="video/webm">-->
         </video>
+
     </section>
 
         <section class="about-section row" id="about-section">
@@ -92,18 +100,18 @@
                         <p>You can decide whether to create your site using UI Kit blocks or samples.</p>
                         <div class="features">
                             <div class="box">
-                                <img src="common-files/icons/retina@2x.png" width="100" height="100" alt="">
+                                <img src="common-files/icons/front-end.png" width="100" height="100" alt="">
                                 <h6>Front-end Development</h6>
                                 <p>To get started, you select the desired sample and base the entire website on it. It’s that simple!
                                 </p>
                             </div>
                             <div class="box">
-                                <img src="common-files/icons/Gift-Box@2x.png" width="100" height="100" alt="">
+                                <img src="common-files/icons/Responsive1@2x.png" width="100" height="100" alt="">
                                 <h6 class="responsive">Responsive Design</h6>
                                 <p>Samples will show you the feeling on how to play around using the components in the website building process.</p>
                             </div>
                             <div class="box">
-                                <img src="common-files/icons/time@2x.png" width="100" height="100" alt="">
+                                <img src="common-files/icons/wordpress.png" width="100" height="100" alt="">
                                 <h6>Wordpress/Custom CMS</h6>
                                 <p>Responsive web design is a web design approach aimed to provide crafting sites.</p>
                             </div>
@@ -114,13 +122,13 @@
                         <div id="c-10_myCarousel" class="carousel slide">
                             <div class="carousel-inner">
                                 <div class="item active">
-                                    <img src="common-files/img/content/screen-4@2x.png" width="302" height="635" alt="">
+                                    <img src="common-files/img/home/mobile-screenshot1.png" width="302" height="635" alt="">
                                 </div>
                                 <div class="item">
-                                    <img src="common-files/img/content/screen-2@2xc-30.png" width="302" height="635" alt="">
+                                    <img src="common-files/img/home/mobile-screenshot2.png" width="302" height="635" alt="">
                                 </div>
                                 <div class="item">
-                                    <img src="common-files/img/content/screen-3@2x.png" width="302" height="635" alt="">
+                                    <img class="screenshot3" src="common-files/img/home/mobile-screenshot3.png" width="302" height="635" alt="">
                                 </div>
                             </div>
                             <ol class="carousel-indicators">

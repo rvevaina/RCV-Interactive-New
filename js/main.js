@@ -46,7 +46,50 @@ $( document ).ready(function() {
         $('.wall-image').animate({'opacity':'0'}, 1600);
     };
 
+    $(".video-main")[0].playbackRate = 1.2;
 
+    slideToAbout = function(){
+        $('html, body').animate({
+            scrollTop: $("#about-section").offset().top-75
+        }, 1800);
+    };
+
+    stopVideo = function(){
+        $(".video-main")[0].playbackRate = 10000;
+    };
+
+    if ($(window).width() > 1340 && $(window).width() < 1500) {
+        $("#after").replaceWith("<map name='after'><area shape='poly' coords='917,84,1378,84,1378,287,917,286' href='#about-section' onclick='slideToAbout();return false;'>" +
+            "<area shape='poly' coords='912,295,1380,298,1379,439,911,440' href='work.html'>" +
+            "<area shape='poly' coords='907,440,1378,444,1376,647,924,646' href='contact.html'>")
+    } else if ($(window).width() > 1500){
+        $("#after").replaceWith("<map name='after'><area shape='poly' coords='1065,90,1635,92,1635,336,1071,335' href='#about-section' onclick='slideToAbout();return false;'>" +
+            "<area shape='poly' coords='1076,351,1613,355,1612,508,1084,510' href='work.html'>" +
+            "<area shape='poly' coords='1080,516,1642,524,1632,766,1077,746' href='contact.html'>")
+    }
+
+    var eventFired = 0;
+
+    if ($(window).width() < 1340) {
+        console.log('Less than 960');
+    }
+    else {
+        eventFired = 1;
+    }
+
+    $(window).resize(function() {
+        if(!eventFired){
+            if ($(window).width() > 1340 && $(window).width() < 1500) {
+                $("#after").replaceWith("<map name='after'><area shape='poly' coords='917,84,1378,84,1378,287,917,286' href='#about-section' onclick='slideToAbout();return false;'>" +
+                    "<area shape='poly' coords='912,295,1380,298,1379,439,911,440' href='work.html'>" +
+                    "<area shape='poly' coords='907,440,1378,444,1376,647,924,646' href='contact.html'>")
+            } else if ($(window).width() > 1500) {
+                $("#after").replaceWith("<map name='after'><area shape='poly' coords='1065,90,1635,92,1635,336,1071,335' href='#about-section' onclick='slideToAbout();return false;'>" +
+                    "<area shape='poly' coords='1076,351,1613,355,1612,508,1084,510' href='work.html'>" +
+                    "<area shape='poly' coords='1080,516,1642,524,1632,766,1077,746' href='contact.html'>")
+            }
+        }
+    });
 
 //Chrome Transitions
 
