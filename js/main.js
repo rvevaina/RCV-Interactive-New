@@ -20,10 +20,10 @@ $( document ).ready(function() {
         $('.main-landing').css({'opacity':( 1000-scrollTop )/1000});
 
 
-        if ($(window).scrollTop() >= stickyTop) {
+        if (($(window).scrollTop() >= stickyTop)){
             $('.navbar').css({'background':'#f6f6f6'});
             $('.about-page').css({'opacity':'1'});
-        } else{
+        } else if ($(window).width() > 667) {
             $('.navbar').css({'background':'rgba(215, 219, 218, 0.7)'});
             $('.about-page').css({'opacity':'0'});
         }

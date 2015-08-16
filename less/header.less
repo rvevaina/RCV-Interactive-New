@@ -13,11 +13,111 @@
     width: 100%;
     border-bottom: 1px solid #e9e9e9;
     position: fixed;
+    min-height: 73px;
     &.home-page{
       background: rgba(215, 219, 218, 0.7);
     }
     .navbar-toggle{
       background: url("../common-files/icons/menu-icon-dark@2x.png");
+      display: none;
+    }
+    .mobile-nav{
+      display: none;
+      margin-left: 5%;
+      margin-top: 2.8%;
+      // Burger menu button
+      .burger {
+        display: inline-block;
+        border: 0;
+        background: none;
+        outline: 0;
+        padding: 0;
+        cursor: pointer;
+        border-bottom: 4px solid black;
+        width: 28px;
+        transition: border-bottom 1s ease-in-out;
+        -webkit-transition: border-bottom 1s ease-in-out;
+        margin-left: 40%;
+        // Fix for extra space in Firefox
+        &::-moz-focus-inner {
+          border: 0;
+          padding: 0;
+        }
+        &:before {
+          content: "";
+          display: block;
+          border-bottom: 4px solid black;
+          width: 100%;
+          margin-bottom: 5px;
+          transition: transform 0.5s ease-in-out;
+          -webkit-transition: -webkit-transform 0.5s ease-in-out;
+        }
+        &:after {
+          content: "";
+          display: block;
+          border-bottom: 4px solid black;
+          width: 100%;
+          margin-bottom: 5px;
+          transition: transform 0.5s ease-in-out;
+          -webkit-transition: -webkit-transform 0.5s ease-in-out;
+        }
+      }
+      .burger-check {
+        display: none;
+      }
+      .burger-check:checked ~ .burger {
+        border-bottom: 4px solid transparent;
+        transition: border-bottom 0.8s ease-in-out;
+        -webkit-transition: border-bottom 0.8s ease-in-out;
+
+        &:before {
+          transform: rotate(-405deg) translateY(1px) translateX(-3px);
+          -webkit-transform: rotate(-405deg) translateY(1px) translateX(-3px);
+          transition: transform 0.5s ease-in-out;
+          -webkit-transition: -webkit-transform 0.5s ease-in-out;
+        }
+
+        &:after {
+          transform: rotate(405deg) translateY(-4px) translateX(-5px);
+          -webkit-transform: rotate(405deg) translateY(-4px) translateX(-5px);
+          transition: transform 0.5s ease-in-out;
+          -webkit-transition: -webkit-transform 0.5s ease-in-out;
+        }
+      }
+      // * * * Navigation * * *
+
+      .mobile-navigation {
+        overflow: hidden;
+        max-height: 0;
+        margin-bottom: 25%;
+
+        transition: max-height 0.5s ease-in-out;
+      }
+
+      .burger-check:checked ~ .mobile-navigation {
+        max-height: 500px;
+
+        transition: max-height 0.5s ease-in-out;
+      }
+
+      // * * * Demo * * *
+
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+        font-size: 18px;
+        padding: 5px 0;
+        text-align: center;
+        a {
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
     }
     &.navbar-fixed-top {
       position: fixed;
@@ -27,7 +127,7 @@
       margin: auto;
     }
     .about-page{
-      opacity: 0;
+      opacity: 1;
     }
     .brand {
       .font(25px);

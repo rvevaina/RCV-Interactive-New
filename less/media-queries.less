@@ -12,15 +12,12 @@
 
 //Tablet styles
 
-@media (max-width: 992px) and (min-width: 769px) {
+@media (max-width: 992px) and (min-width: 667px) {
   .navbar{
     .wrap{
       width: 950px;
       .navbar-header{
         float: left;
-        .brand{
-          padding: 10% 0 0 0;
-        }
       }
       .navbar-collapse.collapse{
         display: block !important;
@@ -33,16 +30,60 @@
 
 //Mobile styles
 
-@media (max-width: 768px) {
-  .navbar{
-    .wrap{
+@media (max-width: 667px) {
+
+  .navbar {
+    .mobile-nav{
+      display: block !important;
+      float: left;
+    }
+    .wrap {
       width: 950px;
-      .navbar-header{
+      .navbar-header {
         float: left;
-        .brand{
-          padding: 10% 0 0 0;
+      }
+    }
+    &.home-page{
+      background: rgba(215, 219, 218, 1);
+    }
+  }
+
+  .main-landing {
+    display: none;
+  }
+
+  .about-section {
+    display: none;
+  }
+
+  .main-content {
+    margin-top: 19%;
+    img.design-dev-mobile {
+      display: block;
+    }
+    .text-center {
+      display: none;
+    }
+    .contact-landing h2 {
+      font-size: 26px;
+      max-width: 85%;
+      line-height: 39px;
+    }
+  }
+  .contact{
+    p {
+      font-size: 14px;
+    }
+  }
+  footer{
+    .container{
+      width: 80px;
+        nav ul li{
+          text-align: center;
+        }
+        .social-btns{
+          margin-left: -10px;
         }
       }
     }
-  }
 }
