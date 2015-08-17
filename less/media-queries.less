@@ -1,16 +1,19 @@
-@media (min-width: 992px) {
+@media (max-width: 960px) {
   .container{
     width: 100%;
   }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .container {
     width: 100%;
   }
+  .footer>.container {
+    max-width: 650px !important;
+  }
 }
 
-//Tablet styles
+//Tablet styles for Nav
 
 @media (max-width: 992px) and (min-width: 667px) {
   .navbar{
@@ -28,12 +31,12 @@
   }
 }
 
+
 //Mobile styles
 
 @media (max-width: 667px) {
-
   .navbar {
-    .mobile-nav{
+    .mobile-nav {
       display: block !important;
       float: left;
     }
@@ -43,10 +46,50 @@
         float: left;
       }
     }
-    &.home-page{
+    &.home-page {
       background: rgba(215, 219, 218, 1);
     }
   }
+  .main-content {
+    margin-top: 19% !important;
+  }
+  .work{
+    padding-top: 150px;
+    .head-box:before{
+      top: 0;
+      background: black !important;
+      opacity: 1 !important;
+    }
+    .projects {
+      margin-top: -10%;
+      .photo {
+        width: 100% !important;
+      }
+      .project, .photo-wrapper {
+        width: 88% !important;
+        margin-left: 5%;
+      }
+    }
+  }
+
+  footer{
+    .container{
+      width: 80px;
+      nav ul li{
+        text-align: center;
+      }
+      .social-btns{
+        margin-left: -10px;
+      }
+    }
+  }
+}
+
+
+
+//Mobile styles and tablet styles
+
+@media (max-width: 960px) {
 
   .main-landing {
     display: none;
@@ -57,9 +100,10 @@
   }
 
   .main-content {
-    margin-top: 19%;
+    margin-top: 9%;
     img.design-dev-mobile {
       display: block;
+      width: 100%;
     }
     .text-center {
       display: none;
@@ -70,20 +114,56 @@
       line-height: 39px;
     }
   }
+  .work{
+    .container{
+      max-width: 800px;
+    }
+    .head-box:before{
+      top: -70px;
+      background: #ebedee url('../common-files/img/projects/foosball.png') no-repeat 70% 100%;
+      background-size: cover;
+    }
+    .head-box p{
+      max-width: 300px;
+    }
+    .projects{
+      .photo{
+        width: 56%;
+      }
+      .overlay{
+        display: none;
+      }
+      .name{
+        h3{
+          font-size: 20px;
+          margin-bottom: 3%;
+        }
+      }
+      .info{
+        width: 90%;
+        margin: auto;
+        padding-left: 0;
+      }
+      .project, .photo-wrapper{
+        width: 710px;
+        margin-bottom: 8%;
+        background: none;
+        &:hover{
+          background: none;
+          .photo {
+            .opacity(70);
+          }
+        }
+      }
+    }
+  }
   .contact{
+    margin: 15% auto 0;
     p {
       font-size: 14px;
     }
   }
-  footer{
-    .container{
-      width: 80px;
-        nav ul li{
-          text-align: center;
-        }
-        .social-btns{
-          margin-left: -10px;
-        }
-      }
-    }
+  .footer>.container {
+    max-width: 800px;
+  }
 }

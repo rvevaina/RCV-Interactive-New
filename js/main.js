@@ -36,6 +36,14 @@ $( document ).ready(function() {
         }, 1800);
     });
 
+    // Wall Image and video centered on screen
+
+    $('.wall-image').css('margin-top', ($(window).outerHeight()/11) + 'px');
+
+    $('.wall-image-after').css('margin-top', ($(window).outerHeight()/13) + 'px');
+
+    $('.video-main').css('margin-top', ($(window).outerHeight()/11) + 'px');
+
     //image after video is done
 
     var video = document.getElementsByTagName('video')[0];
