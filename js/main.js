@@ -124,11 +124,11 @@ $( document ).ready(function() {
             },800);
             $designImageChrome.delay(800).animate({
                 opacity: 1,
-                width: "30%"
+                width: "27%"
             }, 2400);
             $designTextChrome.delay(1200).animate({
                 opacity: 1,
-                fontSize: "1.3rem"
+                fontSize: "1.4rem"
             }, 2400);
             $developContentChrome.css("pointer-events", "none");
             toggle = 1;
@@ -164,11 +164,10 @@ $( document ).ready(function() {
                 opacity: 0
             },800);
             $developImageChrome.delay(800).animate({
-                opacity: 1,
+                opacity: 1
             }, 2400);
             $developTextChrome.delay(1200).animate({
-                opacity: 1,
-                fontSize: "1.3rem"
+                opacity: 1
             }, 2400);
             $designContentChrome.css("pointer-events", "none");
             toggle = 1;
@@ -225,12 +224,10 @@ $( document ).ready(function() {
                     opacity: 0
                 }, 100);
                 $designImage.delay(800).animate({
-                    opacity: 1,
-                    width: "30%"
+                    opacity: 1
                 }, 2400);
                 $designText.delay(1200).animate({
-                    opacity: 1,
-                    fontSize: "1.3rem"
+                    opacity: 1
                 }, 2400);
                 $developSection.css("pointer-events", "none");
                 $developSection.css("opacity", "0");
@@ -272,11 +269,10 @@ $( document ).ready(function() {
                     opacity: 0
                 }, 100);
                 $developImage.delay(800).animate({
-                    opacity: 1,
+                    opacity: 1
                 }, 2400);
                 $developText.delay(1200).animate({
-                    opacity: 1,
-                    fontSize: "1.3rem"
+                    opacity: 1
                 }, 2400);
                 $designContent.css("pointer-events", "none");
                 $designSection.css("opacity", "0");
@@ -322,5 +318,7 @@ $('.carousel').carousel({
         $('iframe').contents().find("head")
             .append($("<style type='text/css'>  body{display:none !important;}  </style>"));
     });
+
+
 
 }); //Document ready

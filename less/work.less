@@ -3,7 +3,7 @@
  * */
 .work {
   padding-top: 110px;
-  padding-bottom: 110px;
+  padding-bottom: 30px;
   margin-top: 0;
   .title {
     margin: 0 0 50px;
@@ -63,7 +63,7 @@
     }
     p {
       font-size: 16px;
-      max-width: 350px;
+      max-width: 560px;
     }
     .features {
       border-top: 2px solid rgba(189, 195, 199, 0.3);
@@ -90,14 +90,10 @@
   .projects {
     @photo-width: 330px;
     @photo-height: 270px;
-    display: table;
     width: 100%;
     margin-top: 4%;
     & + .projects {
       margin-top: 80px;
-    }
-    .project-wrapper {
-      display: table-cell;
     }
     .project-wrapper:first-child + .project-wrapper {
       text-align: center;
@@ -106,13 +102,16 @@
       text-align: right;
     }
     .project {
-      width: @photo-width;
-      display: inline-block;
+      float: left;
+      width: 1090px;
+      margin-top: 2%;
+      margin-bottom: 3%;
     }
     .photo-wrapper {
       width: @photo-width;
       height: @photo-height;
       position: relative;
+      float: left;
       .border-radius(6px);
       overflow: hidden;
       background-color: #ecf0f1;
@@ -147,18 +146,19 @@
     }
     .info {
       text-align: left;
-      font-size: 14px;
-      color: #95a5a6;
-      margin-top: 40px;
+      color: black;
       line-height: 1.4;
-      padding-left: 1rem;
+      padding-left: 34%;
+      width: 85%;
+      p{
+        font-size: 1.5rem;
+        color: darkslategrey;
+      }
       span{
         color: @dark-red;
-        font-size: 16px;
       }
       span.technology {
         color: black;
-        font-size: 18px;
       }
     }
     .name {
@@ -168,12 +168,11 @@
       h3{
         color: black;
         font-size: 24px;
+        margin-bottom: 2%;
       }
     }
-    .project:hover {
-      .photo-wrapper {
+    .photo-wrapper:hover {
         background-color: #1abc9c;
-      }
       .photo {
         .opacity(20);
       }
