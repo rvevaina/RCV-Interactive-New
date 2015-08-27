@@ -24,7 +24,7 @@ $( document ).ready(function() {
             $('.navbar').css({'background':'#f6f6f6'});
             $('.about-page').css({'opacity':'1'});
         } else if ($(window).width() > 667) {
-            $('.navbar').css({'background':'rgba(215, 219, 218, 0.7)'});
+            $('.navbar').css({'background':'#A6A5A1'});
             $('.about-page').css({'opacity':'0'});
         }
     });
@@ -38,11 +38,11 @@ $( document ).ready(function() {
 
     // Wall Image and video centered on screen
 
-    $('.wall-image').css('margin-top', ($(window).outerHeight()/11) + 'px');
+    $('.wall-image').css('margin-top', ($(window).outerHeight()/12) + 'px');
 
-    $('.wall-image-after').css('margin-top', ($(window).outerHeight()/13) + 'px');
+    $('.wall-image-after').css('margin-top', ($(window).outerHeight()/17) + 'px');
 
-    $('.video-main').css('margin-top', ($(window).outerHeight()/11) + 'px');
+    $('.video-main').css('margin-top', ($(window).outerHeight()/12) + 'px');
 
     //image after video is done
 
