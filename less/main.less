@@ -127,8 +127,14 @@ body{
       position: absolute;
       z-index: 101;
       margin: 12% -12%;
-      PADDING: 8.5% 8%;
+      PADDING: 8% 8%;
       cursor: pointer;
+      img.finger-tap-design{
+        width: 15%;
+        position: absolute;
+        left: 42%;
+        opacity: 0;
+      }
       h3.title {
         color: white;
         text-transform: uppercase;
@@ -175,7 +181,13 @@ body{
     position: absolute;
     z-index: 101;
     margin: 12% 54%;
-    PADDING: 8.5% 2%;
+    PADDING: 8% 2%;
+    img.finger-tap-development{
+      width: 22%;
+      position: absolute;
+      left: 38%;
+      opacity: 0;
+    }
     h3.title {
       font-size: 5rem;
       color: white;
@@ -234,6 +246,12 @@ body{
     top: 42%;
     left: 0;
     cursor: pointer;
+    img.finger-tap-design{
+      width: 22%;
+      position: absolute;
+      left: 40%;
+      opacity: 0;
+    }
     h3.title {
       color: white;
       text-transform: uppercase;
@@ -289,6 +307,12 @@ body{
     z-index: 101;
     top: 37%;
     left: 4%;
+    img.finger-tap-development{
+      width: 22%;
+      position: absolute;
+      left: 38%;
+      opacity: 0;
+    }
     h3.title {
       font-size: 5rem;
       color: white;
@@ -420,10 +444,12 @@ body{
     .font(30px, @text-color-heading);
     font-family: 'Open Sans', sans-serif;
     margin-bottom: 3%;
-    font-weight: 300;
+    font-weight: 500;
   }
   p {
     .font(16px);
+    font-weight: lighter;
+    color: #000;
   }
   .features {
     .box {
@@ -459,9 +485,11 @@ body{
     }
     p {
       .font(16px);
-      //span{
-      //  color: #c0392b;
-      //}
+      font-weight: lighter;
+      max-width: 350px;
+      span{
+        .font(16px);
+      }
     }
   }
 }

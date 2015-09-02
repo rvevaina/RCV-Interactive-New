@@ -1,3 +1,3 @@
 $(".head-box").click(function(){
-    alert("Website coming soon!");
+    window.open('http://rcvinteractive.com/notch/index.html', '_blank');
 });

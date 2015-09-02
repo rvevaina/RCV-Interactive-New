@@ -123,6 +123,7 @@ $( document ).ready(function() {
     $designContentChrome.click(function() {
         $designSectionChrome.toggleClass("active");
         $developHeaderChrome.stop().fadeToggle("slow");
+        $('.finger-tap-design').hide();
         if(toggle === 0){
             $designContentChrome.stop().animate({
                 margin: "-5% -7%"
@@ -164,6 +165,7 @@ $( document ).ready(function() {
         $designSectionChrome.toggleClass("develop-active");
         $developSectionChrome.toggleClass("active");
         $designHeaderChrome.fadeToggle("slow");
+        $('.finger-tap-development').hide();
         if(toggle === 0){
             $developContentChrome.stop().animate({
                 margin: "-5% 38%"
@@ -223,6 +225,7 @@ $( document ).ready(function() {
         $designContent.click(function () {
             $designSection.toggleClass("active");
             $developHeader.stop().fadeToggle("slow");
+            $('.finger-tap-design').hide();
             if (toggle === 0) {
                 $designContent.stop().animate({
                     top: "10%",
@@ -268,6 +271,7 @@ $( document ).ready(function() {
             $designSection.toggleClass("develop-active");
             $developSection.toggleClass("active");
             $designHeader.fadeToggle("slow");
+            $('.finger-tap-development').hide();
             if (toggle === 0) {
                 $developContent.stop().animate({
                     top: "4%",
@@ -308,6 +312,27 @@ $( document ).ready(function() {
                 toggle = 0;
             }
         });
+
+//Finger tap
+
+    $('.design-content h3').hover(function(){
+        $('.finger-tap-design').animate({
+            opacity: 1
+        }, 1200);
+        //$('.finger-tap-development').animate({
+        //    opacity: 0
+        //}, 0);
+    });
+
+    $('.develop-content h3').hover(function(){
+        $('.finger-tap-development').animate({
+            opacity: 1
+        }, 1200);
+        //$('.finger-tap-design').animate({
+        //    opacity: 0
+        //});
+    });
+
 
 //Activate carousal
 
