@@ -124,6 +124,7 @@ $( document ).ready(function() {
         $designSectionChrome.toggleClass("active");
         $developHeaderChrome.stop().fadeToggle("slow");
         $('.finger-tap-design').hide();
+        $('.finger-tap-development').hide();
         if(toggle === 0){
             $designContentChrome.stop().animate({
                 margin: "-5% -7%"
@@ -166,6 +167,7 @@ $( document ).ready(function() {
         $developSectionChrome.toggleClass("active");
         $designHeaderChrome.fadeToggle("slow");
         $('.finger-tap-development').hide();
+        $('.finger-tap-design').hide();
         if(toggle === 0){
             $developContentChrome.stop().animate({
                 margin: "-5% 38%"
@@ -226,6 +228,7 @@ $( document ).ready(function() {
             $designSection.toggleClass("active");
             $developHeader.stop().fadeToggle("slow");
             $('.finger-tap-design').hide();
+            $('.finger-tap-development').hide();
             if (toggle === 0) {
                 $designContent.stop().animate({
                     top: "10%",
@@ -272,6 +275,7 @@ $( document ).ready(function() {
             $developSection.toggleClass("active");
             $designHeader.fadeToggle("slow");
             $('.finger-tap-development').hide();
+            $('.finger-tap-design').hide();
             if (toggle === 0) {
                 $developContent.stop().animate({
                     top: "4%",
