@@ -13,6 +13,7 @@
     <!-- Using only with Flat-UI (free)-->
     <link rel="stylesheet" href="common-files/css/icon-font.css">
     <!-- end -->
+    <link rel="stylesheet" href="common-files/css/animate.min.css">
     <link rel="stylesheet" href="common-files/css/animations.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="//load.sumome.com/" data-sumo-site-id="cbf5886bd7cdb20000324ef4fcdb067d882725cf7052f590d4b1cd63e8f47820" async="async"></script>
@@ -69,11 +70,11 @@
         </div>
     </div>
 
-    <section class="main-landing full-height">
+    <section class="main-landing full-height" id="main-landing">
         <img class ="wall-image" src="common-files/img/home/video-top7.png" usemap="#after" alt=""/>
         <img class="wall-image-after" src="common-files/img/home/wall-image-after3.png" usemap="#after" alt=""/>
         <map name="after" id="after">
-            <area shape="poly" coords="741,43,1146,35,1143,201,736,206" href="#about-section" onclick="slideToAbout();return false;">
+            <area shape="poly" coords="741,43,1146,35,1143,201,736,206" href="#bio" onclick="slideToAbout();return false;">
             <area shape="poly" coords="741,203,1146,202,1143,337,734,340" href="work.html">
             <area shape="poly" coords="736,339,1149,345,1147,562,745,553" href="contact">
             <area shape="poly" coords="96,173,741,179,742,421,105,425" href="#" onclick="stopVideo();return false;">
@@ -85,7 +86,7 @@
         </video>
     </section>
 
-    <section class="bio">
+    <section class="bio" id="bio">
         <div class="container">
             <div class="content">
                 <img src="common-files/img/home/headshot.jpg" class="headshot" alt=""/>
@@ -136,11 +137,12 @@
                 <div class="row content">
                     <div class="text">
                         <h3 class="title">Why RCV Interactive?</h3>
-                        <p>You give your customers unbeatable service and treat them exceptionally well. Why shouldn’t you expect the same from your designer/developer?</p>
+                        <p>You give your customers unbeatable service and aim for targeted results. Why shouldn’t you expect the same from your designer/developer?</p>
                         <p> My main focus is conveying your story to the world in the best way possible. This means listening to your goals, values and expectations before starting any project, and responsive communication throughout the process.</p>
                         <p>By creating targeted campaigns designed to convert visitors to customers, rest assured knowing that your website has been built specifically with one thing in mind - attracting you more customers and earning you more money.</p>
+                        <a class="btn btn-success" href="work">Case Studies</a>
                     </div>
-                    <img src="common-files/img/home/macbook-pro.png" class="macbook" alt=""/>
+                    <img src="common-files/img/home/macbook-pro.png" id="waypoint" class="macbook wp1" alt=""/>
                 </div>
             </div>
         </section>
@@ -176,7 +178,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4 col-sm-offset-1 text-center">
+                    <div class="col-sm-4 col-sm-offset-1 text-center wp2">
                         <img class="iphone" src="common-files/img/content/iphone@2x.png" width="302" height="635" alt="">
                         <div id="c-10_myCarousel" class="carousel slide">
                             <div class="carousel-inner">
@@ -218,7 +220,7 @@
                         <li><a href="work.html">WORK</a>
                         </li>
                         <li class="scroll-btn">
-                            <a href="#" class="scroll-top fui-arrow-up"></a>
+                            <a href="#bio" class="scroll-top fui-arrow-up"></a>
                         </li>
                         <li><a target="_blank" href="https://medium.com/@ray_vevaina">BLOG</a>
                         </li>
@@ -251,6 +253,7 @@
 <script src="common-files/js/modernizr.custom.js"></script>
 <script src="common-files/js/page-transitions.js"></script>
 <script src="common-files/js/jquery.parallax.min.js"></script>
+<script src="bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
 <script src="common-files/js/startup-kit.js"></script>
 <script src="common-files/js/css_browser_selector.js" type="text/javascript"></script>
 <script src="js/main.js"></script>

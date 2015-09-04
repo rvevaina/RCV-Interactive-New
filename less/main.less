@@ -399,24 +399,44 @@ p{
  * Why RCV stylesheet
  * */
 .why{
-  background-color: #ecf0f1;
+  .container{
+    background-color: #ecf0f1;
+    position: relative;
+    left: 0.5%;
+  }
   .content{
     margin: 10% auto;
     position: relative;
     max-width: 1000px;
     .text{
-      width: 540px;
+      width: 490px;
       padding-top: 1%;
       padding-left: 1%;
       h3{
-        margin-bottom: 3%;
+        margin-bottom: 5%;
+      }
+      .btn-success {
+        background: @dark-red;
+        font-size: 22px;
+        font-weight: 500;
+        padding: 13px 30px 17px 30px;
+        margin-top: 3%;
+        &:hover {
+          background: #e74c3c;
+        }
       }
     }
+
     img.macbook{
       position: absolute;
-      left: 79%;
-      top: -15%;
-      width: 65%;
+      top: -3%;
+      width: 74%;
+      opacity: 0;
+    }
+    .animated{
+      left: 58%;
+      opacity: 1;
+      animation-duration: 1s;
     }
   }
 
@@ -432,12 +452,19 @@ p{
     max-width: 1000px;
     margin: auto;
     padding: 5% 0;
+    .text-center{
+      opacity: 0;
+    }
+    .animate{
+      opacity: 1;
+    }
+    img.iphone{
+      position: relative;
+      width: 80%;
+      margin-top: 25%;
+    }
   }
-  img.iphone{
-    position: relative;
-    width: 80%;
-    margin-top: 25%;
-  }
+
   .carousel {
     margin-bottom: 0;
     display: inline-block;
@@ -566,6 +593,7 @@ p{
   max-width: 1120px;
   margin: auto;
   position: relative;
+  z-index: 200;
   .container{
     padding: 14% 0;
   }

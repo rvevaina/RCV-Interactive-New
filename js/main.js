@@ -13,7 +13,7 @@ $( document ).ready(function() {
 
 //Fade out div on scroll + Nav changes color
 
-    var stickyTop = $('.about-section').offset().top-100;
+    var stickyTop = $('.bio').offset().top-100;
 
     $(window).scroll(function(){
         var scrollTop = $(window).scrollTop();
@@ -338,6 +338,19 @@ $( document ).ready(function() {
     });
 
 
+//Waypoints for animations
+
+    $('.wp1').waypoint(function() {
+        $('.wp1').addClass('animated fadeInRight');
+    }, {
+        offset: '70%'
+    });
+    $('.wp2').waypoint(function() {
+        $('.wp2').addClass('animated fadeInUp');
+    }, {
+        offset: '55%'
+    });
+
 //Activate carousal
 
 $('.carousel').carousel({
@@ -356,6 +369,21 @@ $('.carousel').carousel({
             .append($("<style type='text/css'>  body{display:none !important;}  </style>"));
     });
 
+//Smooth Scroll
+
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 2000);
+                    return false;
+                }
+            }
+        });
 
 
 }); //Document ready
