@@ -50,8 +50,25 @@
       background: rgba(215, 219, 218, 1);
     }
   }
+  .bio{
+    margin-top: 23% !important;
+    .content{
+      display: none;
+    }
+  }
+  .why{
+    .content{
+      img.macbook{
+        display: none;
+      }
+      .text{
+        width: 90%;
+        margin: auto;
+      }
+    }
+  }
   .main-content {
-    margin-top: 22% !important;
+    margin-top: 0 !important;
   }
   .about-2{
     .features{
@@ -71,6 +88,7 @@
         }
         p{
           text-align: center;
+          margin: auto;
         }
       }
     }
@@ -119,12 +137,46 @@
   }
 }
 
-
-
+@media (max-width: 1200px) {
+  .work {
+    .head-box:before {
+      background: #ebedee url('../common-files/img/projects/foosball.png') no-repeat 50% 100%;
+    }
+  }
+}
 //Mobile styles and tablet styles
 
 @media (max-width: 960px) {
 
+  .bio{
+    margin-top: 9%;
+    img.design-dev-mobile {
+      display: block;
+      width: 100%;
+    }
+    .content{
+      width: 100%;
+      .text{
+        margin: 6% auto 0%;
+      }
+    }
+  }
+
+  .why{
+    .content{
+      img.macbook{
+        display: none;
+      }
+      .text{
+        width: 90%;
+        margin: auto;
+      }
+    }
+  }
+
+  .skills{
+    width: 90%;
+  }
   .main-landing {
     display: none;
   }
@@ -135,10 +187,6 @@
 
   .main-content {
     margin-top: 9%;
-    img.design-dev-mobile {
-      display: block;
-      width: 100%;
-    }
     .text-center {
       display: none;
     }

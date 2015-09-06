@@ -13,7 +13,7 @@ $( document ).ready(function() {
 
 //Fade out div on scroll + Nav changes color
 
-    var stickyTop = $('.bio').offset().top-100;
+    var stickyTop = $('.about-section').offset().top-100;
 
     $(window).scroll(function(){
         var scrollTop = $(window).scrollTop();
