@@ -13,7 +13,7 @@ $( document ).ready(function() {
 
 //Fade out div on scroll + Nav changes color
 
-    var stickyTop = $('.about-section').offset().top-100;
+    var stickyTop = $('.bio').offset().top-100;
 
     $(window).scroll(function(){
         var scrollTop = $(window).scrollTop();
@@ -32,7 +32,7 @@ $( document ).ready(function() {
     //Landing page scroll down
     $('img.about-block').click(function(){
         $('html, body').animate({
-            scrollTop: $("#about-section").offset().top-95
+            scrollTop: $("#top").offset().top-95
         }, 1800);
     });
 
@@ -58,8 +58,8 @@ $( document ).ready(function() {
 
     slideToAbout = function(){
         $('html, body').animate({
-            scrollTop: $("#about-section").offset().top-75
-        }, 1800);
+            scrollTop: $("#top").offset().top
+        }, 1000);
     };
 
     stopVideo = function(){
@@ -379,7 +379,7 @@ $('.carousel').carousel({
                 if (target.length) {
                     $('html,body').animate({
                         scrollTop: target.offset().top
-                    }, 2000);
+                    }, 1600);
                     return false;
                 }
             }
